@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> A.T ⎸ Sobre mí </title>
+    <title>Sobre mí - Agostina Tolotti</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
 
+    <a href="#contenido">Saltar al contenido principal</a>
+
     <header>
         <nav>
-            <a href="../index.html"><img src="../assets/images/logo-2.png" alt="Logo de Agostina Tolotti"></a>
+            <a href="../index.html"><img src="../assets/images/logo-2.png" alt="Agostina Tolotti, ir al inicio"></a>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./sobre-mi.html">Sobre mí</a></li>
+                <li><a href="./sobre-mi.html" aria-current="page">Sobre mí</a></li>
                 <li><a href="./proyectos.html">Proyectos</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="contenido">
 
         <section>
             <h1>Sobre mí</h1>
@@ -81,9 +83,9 @@
 
                 <tfoot>
                     <tr>
-                        <td>Información:</td>
+                        <th scope="row">Información</th>
                         <td>Duración total: 15 meses. Modalidad Flex.</td>
-                        <td>-</td>
+                        <td>No aplica</td>
                     </tr>
                 </tfoot>
             </table>
@@ -91,18 +93,10 @@
 
 
         <section>
-            <h2>Ubicación</h2>
-            <p>Actualmente me encuentro en Buenos Aires, Argentina. Estoy dispuesta a trabajar remoto para cualquier parte del mundo, siempre y
-                cuando los horarios sean compatibles.</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.953245262204!2d-58.451448328870676!3d-34.598134904231685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca0c687ee0b7%3A0x879b67a1fd77fb98!2sVilla%20Crespo%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1791174950602!5m2!1ses-419!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin" title="Mapa interactivo con la ubicación de Villa Crespo, Buenos Aires."></iframe>
-        </section>
-
-        <section>
             <h2>Contacto</h2>
             <form>
+                <p>Todos los campos son obligatorios.</p>
+
                 <div>
                     <label for="nombre-cliente">Nombre completo:</label>
                     <input id="nombre-cliente" type="text" placeholder="Ej. Agostina Tolotti" name="nombre-cliente" required>
@@ -120,19 +114,32 @@
 
                 <div>
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" placeholder="Escribí lo más detallado posible" minlength="30" name="mensaje" required></textarea>
+                    <textarea id="mensaje" placeholder="Escribí lo más detallado posible" minlength="30" name="mensaje" aria-describedby="ayuda-mensaje" required></textarea>
+                    <p id="ayuda-mensaje">Mínimo 30 caracteres.</p>
                 </div>
 
                 <button type="submit">Enviar</button>
             </form>
         </section>
+
+        <section>
+            <h2>Ubicación</h2>
+            <p>Actualmente me encuentro en Villa Crespo, Buenos Aires, Argentina. Estoy dispuesta a trabajar remoto para cualquier parte del mundo, siempre y
+                cuando los horarios sean compatibles.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.953245262204!2d-58.451448328870676!3d-34.598134904231685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca0c687ee0b7%3A0x879b67a1fd77fb98!2sVilla%20Crespo%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1791174950602!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin" title="Mapa interactivo con la ubicación de Villa Crespo, Buenos Aires."></iframe>
+        </section>
     </main>
 
     <footer>
         <p>2026 Agostina Tolotti</p>
-        <p>WhatsApp:<a href="https://wa.me/message/6GDWTGMY354VM1" target="_blank">+54 9 11 4312-5863</a></p>
-        <p>Email: <a href="mailto:agosmartiretolotti@yahoo.com">agosmartiretolotti@yahoo.com</a></p>
-        <p>Buenos Aires, Argentina</p>
+        <address>
+            <p>WhatsApp: <a href="https://wa.me/message/6GDWTGMY354VM1" target="_blank">+54 9 11 4312-5863 (se abre en una pestaña nueva)</a></p>
+            <p>Email: <a href="mailto:agosmartiretolotti@yahoo.com">agosmartiretolotti@yahoo.com</a></p>
+            <p>Buenos Aires, Argentina</p>
+        </address>
     </footer>
 
 </body>
